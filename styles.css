@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'Mont';
+  font-weight: 900;
+  font-style: normal;
+  src: 
+    url('fonts/Mont-HeavyDEMO.woff') format('woff');
+}
+
+/* 
+@-webkit-keyframes sanchoGradient {
+    0%{background-position:23% 0%}
+    50%{background-position:78% 100%}
+    100%{background-position:23% 0%}
+}
+@-moz-keyframes sanchoGradient {
+    0%{background-position:23% 0%}
+    50%{background-position:78% 100%}
+    100%{background-position:23% 0%}
+}
+@-o-keyframes sanchoGradient {
+    0%{background-position:23% 0%}
+    50%{background-position:78% 100%}
+    100%{background-position:23% 0%}
+}
+@keyframes sanchoGradient { 
+    0%{background-position:23% 0%}
+    50%{background-position:78% 100%}
+    100%{background-position:23% 0%}
+} */
+
+:root {
+  --mobile-width: 375px;
+  --tablet-width: 768px;
+  --desktop-width: 1440px;
+  --border: 10px;
+  --font-size: 30px;
+} 
+
+body {
+  font-family: 'Mont', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  height: 200vh;
+  position: relative;
+}
+
+.wrapper {
+  border: var(--border) solid white;
+  width: 100%;
+  height: calc(100vh);
+  box-sizing: border-box;
+  background-image: linear-gradient(44deg, #ff3c52 0%, #f93b51 100%);
+  padding: 14px;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 13px;
+  margin: 1em 0;
+}
+
+p {
+  font-size: var(--font-size);
+  margin: 14px 0;
+  line-height: 38px;
+  max-width: 325px;
+}
+
+p a {
+  color: white;
+  text-decoration: none;
+  box-shadow: inset 0 -6px rgba(255, 255, 255, .3);
+  display: inline;
+  height: 40px;
+}
+
+.email {
+  position: fixed;
+  left: 0;
+  display: flex;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 26px;
+}
+
+.email a {
+  padding: 33px 0;
+  margin: auto;
+  color: #ff3c52;
+  text-decoration: none;
+}
+
+
+/* ======TABLETS=========== */
+@media screen and (min-width: 768px) {
+
+  :root {
+    --border: 20px;
+    --font-size: 36px;
+  }
+  
+  .wrapper {
+    border-width: var(--border);
+    height: calc(100vh);
+    padding: 40px 60px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    line-height: 15px;
+  }
+  
+  p {  
+    font-size: var(--font-size);
+    line-height: 46px;
+    margin-bottom: 4px;
+    max-width: 605px;
+  }
+
+  p a {
+    height: 45px;
+  }
+
+  .email {
+    font-size: var(--font-size);
+  }
+}
+
+
+/* ======DESKTOP=========== */
+@media screen and (min-width: 1440px) {
+
+  :root {
+    --font-zize: 48px;
+  }
+  
+  p {
+    font-size: var(--font-size);
+    line-height: 64px;
+    max-width: 955px;
+  }
+
+  p a {
+    height: 58px;
+  }
+
+  .email {
+    font-size: var(--font-size);
+  }
+}
