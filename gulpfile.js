@@ -21,8 +21,8 @@ gulp.task("serve", function() {
     open: true
   });
 
-  gulp.watch("assets/styles/**/*.css");
-  gulp.watch("pug/**/**/**/**/*.html");
+  gulp.watch("*.css");
+  gulp.watch("*.html");
 });
 
 gulp.task("default", function(fn) {
